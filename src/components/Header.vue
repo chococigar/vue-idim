@@ -22,7 +22,7 @@
         margin: 40px 2%;
         display: flex;
         justify-content: space-between;
-        width: 60%;
+        width: 40%;
 
         .logo {
             cursor:pointer;

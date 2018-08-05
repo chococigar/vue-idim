@@ -176,7 +176,7 @@ export default {
     .filter {
         margin-bottom: 40px;
         display: flex;
-        width: 60%;
+        width: 40%;
         justify-content: space-between;
         font-family: 'Noto Sans KR';
         font-weight: 200;

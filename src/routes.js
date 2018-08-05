@@ -12,9 +12,13 @@ export const routes = [
     {
         path: '/projects',
         component: Projects,
-        children: [
-            { path: 'pajuchurch', component: PajuChurch }
-        ]
+        // children: [
+        //     { path: 'pajuchurch', component: PajuChurch }
+        // ]
+    },
+    {
+        path: '/projects/pajuchurch',
+        component: PajuChurch 
     },
     {
         path: '/about',
