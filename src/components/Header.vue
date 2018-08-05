@@ -19,7 +19,7 @@
         position:fixed;
         top:0;
 
-        margin: 40px;
+        margin: 40px 2%;
         display: flex;
         justify-content: space-between;
         width: 60%;

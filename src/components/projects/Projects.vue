@@ -1,12 +1,21 @@
 <template>
   <div class="Main">
+    <div class="filter">
+        <span>All Projects</span>
+        <span>Playground</span>
+        <span>Residential</span>
+        <span>Public</span>
+        <span>Museum</span>
+        <span>School</span>
+        <span>Interior</span>
+        <span>Commercial</span>
+    </div>
     <masonry :cols="{default: 4, 1000: 3, 700: 2, 400: 1}" :gutter="40">
         <div v-for="(item, index) in items" :key="index">
-            
             <div class="project">
-                <div class="project__img">
+                <router-link :to="item.detail" class="project__img">
                     <img :src='item.img' >
-                </div>
+                </router-link>
                 <div class="project__name">
                     <span>{{item.name}}</span>
                     <span>{{item.type}}</span>
@@ -17,9 +26,10 @@
                     <p>Design Period / {{item.design_period}}</p>
                 </div>
             </div>
-
         </div>
     </masonry>
+
+    <router-view></router-view>
 
   </div>
 </template>
@@ -36,6 +46,7 @@ export default {
                     location: 'Seoul, Korea',
                     design_period: '2017.01 - 2017.08',
                     img: "/src/assets/1x/project_01.png"
+                    ,detail: "/projects/pajuchurch"
                 },
                 { 
                     name: 'CHANOU',
@@ -44,6 +55,7 @@ export default {
                     location: 'Seoul, Korea',
                     design_period: '2017.01 - 2017.08',
                     img: "/src/assets/1x/project_02.png"
+                    ,detail: "/projects/pajuchurch"
                 },
                 { 
                     name: 'CHANOU',
@@ -52,6 +64,7 @@ export default {
                     location: 'Seoul, Korea',
                     design_period: '2017.01 - 2017.08',
                     img: "/src/assets/1x/project_03.png"
+                    ,detail: "/projects/pajuchurch"
                 },
                 { 
                     name: 'CHANOU',
@@ -60,6 +73,7 @@ export default {
                     location: 'Seoul, Korea',
                     design_period: '2017.01 - 2017.08',
                     img: "/src/assets/1x/project_04.png"
+                    ,detail: "/projects/pajuchurch"
                 },
                 { 
                     name: 'CHANOU',
@@ -68,6 +82,7 @@ export default {
                     location: 'Seoul, Korea',
                     design_period: '2017.01 - 2017.08',
                     img: "/src/assets/1x/project_05.png"
+                    ,detail: "/projects/pajuchurch"
                 },
                 { 
                     name: 'CHANOU',
@@ -76,6 +91,7 @@ export default {
                     location: 'Seoul, Korea',
                     design_period: '2017.01 - 2017.08',
                     img: "/src/assets/1x/project_06.png"
+                    ,detail: "/projects/pajuchurch"
                 },
                 { 
                     name: 'CHANOU',
@@ -84,6 +100,7 @@ export default {
                     location: 'Seoul, Korea',
                     design_period: '2017.01 - 2017.08',
                     img: "/src/assets/1x/project_07.png"
+                    ,detail: "/projects/pajuchurch"
                 },
                 { 
                     name: 'CHANOU',
@@ -92,6 +109,7 @@ export default {
                     location: 'Seoul, Korea',
                     design_period: '2017.01 - 2017.08',
                     img: "/src/assets/1x/project_08.png"
+                    ,detail: "/projects/pajuchurch"
                 },
                 { 
                     name: 'CHANOU',
@@ -100,6 +118,7 @@ export default {
                     location: 'Seoul, Korea',
                     design_period: '2017.01 - 2017.08',
                     img: "/src/assets/1x/project_09.png"
+                    ,detail: "/projects/pajuchurch"
                 },
                 { 
                     name: 'CHANOU',
@@ -108,6 +127,7 @@ export default {
                     location: 'Seoul, Korea',
                     design_period: '2017.01 - 2017.08',
                     img: "/src/assets/1x/project_10.png"
+                    ,detail: "/projects/pajuchurch"
                 },
                 { 
                     name: 'CHANOU',
@@ -116,6 +136,7 @@ export default {
                     location: 'Seoul, Korea',
                     design_period: '2017.01 - 2017.08',
                     img: "/src/assets/1x/project_11.png"
+                    ,detail: "/projects/pajuchurch"
                 },
                 { 
                     name: 'CHANOU',
@@ -124,6 +145,7 @@ export default {
                     location: 'Seoul, Korea',
                     design_period: '2017.01 - 2017.08',
                     img: "/src/assets/1x/project_12.png"
+                    ,detail: "/projects/pajuchurch"
                 },
                 { 
                     name: 'CHANOU',
@@ -132,6 +154,7 @@ export default {
                     location: 'Seoul, Korea',
                     design_period: '2017.01 - 2017.08',
                     img: "/src/assets/1x/project_13.png"
+                    ,detail: "/projects/pajuchurch"
                 }
             ]
         }
@@ -148,7 +171,16 @@ export default {
 <style lang="scss">
 
     .Main {
-        margin: 135px 2% 0 2%;
+        margin: 100px 2% 0 2%;
+    }
+    .filter {
+        margin-bottom: 40px;
+        display: flex;
+        width: 60%;
+        justify-content: space-between;
+        font-family: 'Noto Sans KR';
+        font-weight: 200;
+        font-size: 14px;
     }
 
     .project {
@@ -162,6 +194,7 @@ export default {
             img {
                  width: 100%;
             }
+            margin-bottom: 40px;
         }
         .project__name {
             display: flex;

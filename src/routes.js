@@ -25,5 +25,9 @@ export const routes = [
         children: [
             { path: '', component: Communiation }
         ]
+    },
+    {
+        path: '*',
+        component: Home
     }
 ]
