@@ -1,14 +1,14 @@
 <template>
   <div class="Main">
     <div class="filter">
-        <span>All Projects</span>
-        <span>Playground</span>
-        <span>Residential</span>
-        <span>Public</span>
-        <span>Museum</span>
-        <span>School</span>
-        <span>Interior</span>
-        <span>Commercial</span>
+        <span class="select">All Projects</span>
+        <span class="filter__menu">Playground</span>
+        <span class="select">Residential</span>
+        <span class="select">Public</span>
+        <span class="select">Museum</span>
+        <span class="select">School</span>
+        <span class="select">Interior</span>
+        <span class="select">Commercial</span>
     </div>
     <masonry :cols="{default: 4, 1000: 3, 700: 2, 400: 1}" :gutter="40">
         <div v-for="(item, index) in items" :key="index">
@@ -31,11 +31,19 @@
 
     <router-view></router-view>
 
+    <app-footer></app-footer>
   </div>
 </template>
 
 <script>
+import Footer from './../Footer.vue';
+
 export default {
+
+    components: {
+        appFooter: Footer
+    },
+
     data: function() {
         return {
             items: [
@@ -179,8 +187,14 @@ export default {
         width: 40%;
         justify-content: space-between;
         font-family: 'Noto Sans KR';
-        font-weight: 200;
+        font-weight: 300;
         font-size: 14px;
+        .filter__menu {
+            color: #919192;
+        }
+        .select {
+            color: black;
+        }
     }
 
     .project {
@@ -193,6 +207,7 @@ export default {
             width: 100%;
             img {
                  width: 100%;
+                 margin-bottom: 40px;
             }
             margin-bottom: 40px;
         }
@@ -202,7 +217,7 @@ export default {
             font-family: 'Noto Sans KR';
             font-weight: 600;
             font-size: 12px;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
         }
         .project__info {
             font-family: 'Noto Sans KR';
@@ -211,7 +226,7 @@ export default {
             p {
                 margin: 0;
             }
-            margin-bottom: 30px;
+            margin-bottom: 40px;
         }
     }
     

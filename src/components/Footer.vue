@@ -16,13 +16,15 @@
 <style lang="scss">
 
     .Footer {
-        background-color: #b9baba;
-        padding: 3% 2%;
+        margin-top: 190px;
+        margin-bottom: 90px;
+        padding-top: 40px;
+        border-top: solid 1px rgba(0,0,0,0.4);
     }
 
     p {
         font-family: 'Noto Sans KR';
-        font-weight: 200;
+        font-weight: 400;
         font-size: 11px;
         margin:0;
     }
