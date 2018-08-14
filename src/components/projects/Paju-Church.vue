@@ -6,10 +6,30 @@
         <div class="detail__body">
             <div class="detail__body__imgs">
                 <img src="/src/assets/2x/paju_02.png">
+                <div class="image__exp">
+                    <div class="image__exp__line"></div>
+                    <p class="image__exp__text">도가 넘쳐난다.</p>
+                </div>
                 <img src="/src/assets/2x/paju_03.png">
+                <div class="image__exp">
+                    <div class="image__exp__line"></div>
+                    <p class="image__exp__text">도가 넘쳐난다.</p>
+                </div>
                 <img src="/src/assets/2x/paju_04.png">
+                <div class="image__exp">
+                    <div class="image__exp__line"></div>
+                    <p class="image__exp__text">도가 넘쳐난다.</p>
+                </div>
                 <img src="/src/assets/2x/paju_05.png">
+                <div class="image__exp">
+                    <div class="image__exp__line"></div>
+                    <p class="image__exp__text">도가 넘쳐난다.</p>
+                </div>
                 <img src="/src/assets/2x/paju_06.png">
+                <div class="image__exp">
+                    <div class="image__exp__line"></div>
+                    <p class="image__exp__text">도가 넘쳐난다.</p>
+                </div>
             </div>
             <div class="detail__body__info">
 
@@ -73,6 +93,21 @@ export default {
         // min-height: 100vh;
         // background-color: white;
     // }
+
+    .image__exp {
+        margin: 40px 0;
+        .image__exp__line {
+            // border-top: solid 1px rgba(0,0,0,0.4);
+            border-top: solid 2px black;
+            width: 40px;
+            margin-bottom: 25px;
+        }
+        .image__exp__text {
+            font-family: 'Noto Sans KR';
+            font-size: 16px;
+            margin-bottom: 25px;
+        }
+    }
 
     .footer-detail {
         margin-left: 2%;
