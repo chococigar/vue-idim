@@ -1,0 +1,25 @@
+//$font_path: resolve('@styles/fonts/');
+$font_path: resolve('fonts/');
+
+// *********** //
+// MY FONT //
+@font-face{
+  font-family    : 'Noto light';
+  src            : url($font_path + 'NotoSansCJKkr-Light_0.otf') format("opentype");; /* IE9 Compat; Modes */
+  font-style     : normal;
+  text-rendering : optimizeLegibility;
+}
+
+@font-face{
+  font-family    : 'Noto demilight';
+  src            : url($font_path + 'NotoSansCJKkr-DemiLight_0.otf') format("opentype");; /* IE9 Compat; Modes */
+  font-style     : normal;
+  text-rendering : optimizeLegibility;
+}
+
+@font-face{
+  font-family    : 'Grilli medium';
+  src            : url($font_path + 'GT-Walsheim-Pro-Trial-Medium.otf') format("opentype");; /* IE9 Compat; Modes */
+  font-style     : normal;
+  text-rendering : optimizeLegibility;
+}

@@ -1,30 +1,12 @@
 <template>
+
   <div class="Main">
-    <div class="filter">
-        <span class="select">All Projects</span>
-        <span class="filter__menu">Playground</span>
-        <span class="select">Residential</span>
-        <span class="select">Public</span>
-        <span class="select">Museum</span>
-        <span class="select">School</span>
-        <span class="select">Interior</span>
-        <span class="select">Commercial</span>
-    </div>
-    <masonry :cols="{default: 4, 1000: 3, 700: 2, 400: 1}" :gutter="40">
+    <masonry class="projects" :cols="{default: 2, 800: 1}" :gutter="0">
         <div v-for="(item, index) in items" :key="index">
             <div class="project">
-                <router-link :to="item.detail" class="project__img">
-                    <img :src='item.img' >
+                <router-link :to="item.detail">
+                    <img class='project__img' :src='item.img' >
                 </router-link>
-                <div class="project__name">
-                    <span>{{item.name}}</span>
-                    <span>{{item.type}}</span>
-                </div>
-                <div class="project__info">
-                    <p>Client / {{item.client}}</p>
-                    <p>location / {{item.location}}</p>
-                    <p>Design Period / {{item.design_period}}</p>
-                </div>
             </div>
         </div>
     </masonry>
@@ -179,57 +161,21 @@ export default {
 <style lang="scss">
 
     .Main {
-        margin: 100px 2% 0 2%;
     }
-    .filter {
-        margin-bottom: 40px;
-        display: flex;
-        width: 40%;
-        justify-content: space-between;
-        font-family: 'Noto Sans KR';
-        font-weight: 300;
-        font-size: 14px;
-        .filter__menu {
-            color: #919192;
-        }
-        .select {
-            color: black;
-        }
+    .projects{
+        margin-top:320px;
+        border-top: 0.5px solid #D6D6D6;
+        width:100%;
     }
-
     .project {
-
-        border-bottom: solid 1px rgba(0,0,0,0.4);
-        margin-bottom: 40px;
-
-
-        .project__img {
-            width: 100%;
-            img {
-                 width: 100%;
-                 margin-bottom: 40px;
-            }
-            margin-bottom: 40px;
-        }
-        .project__name {
-            display: flex;
-            justify-content: space-between;
-            font-family: 'Noto Sans KR';
-            font-weight: 600;
-            font-size: 12px;
-            margin-bottom: 25px;
-        }
-        .project__info {
-            font-family: 'Noto Sans KR';
-            font-weight: 200;
-            font-size: 12px;
-            p {
-                margin: 0;
-            }
-            margin-bottom: 40px;
-        }
+        //margin-bottom: 40px;
     }
-    
-    
+    .project__img {
+        vertical-align:top;
+      object-fit: cover;
+      width: 100%;
+      height: 400px;
+    }
+
 </style>
 

@@ -1,0 +1,42 @@
+@import url(https://fonts.googleapis.com/earlyaccess/notosanskr.css);
+@import url(http://fonts.googleapis.com/earlyaccess/nanummyeongjo.css);
+
+body {
+    margin: 0;
+}
+
+
+@font-face{
+  font-family    : 'Noto bold';
+  src            : url('fonts/NotoSans-Bold.ttf'); /* IE9 Compat; Modes */
+  font-style     : normal;
+  text-rendering : optimizeLegibility;
+}
+
+@font-face{
+  font-family    : 'Noto light';
+  src            : url('fonts/NotoSansCJKkr-Light_0.otf') format("opentype"); /* IE9 Compat; Modes */
+  font-style     : normal;
+  text-rendering : optimizeLegibility;
+}
+
+@font-face{
+  font-family    : 'Noto demilight';
+  src            : url('fonts/NotoSansCJKkr-DemiLight_0.otf') format("opentype"); /* IE9 Compat; Modes */
+  font-style     : normal;
+  text-rendering : optimizeLegibility;
+}
+
+@font-face{
+  font-family    : 'Grilli medium';
+  src            : url('fonts/GT-Walsheim-Pro-Trial-Medium.otf') format("opentype"); /* IE9 Compat; Modes */
+  font-style     : normal;
+  text-rendering : optimizeLegibility;
+}
+
+@font-face{
+  font-family    : 'Grilli regular';
+  src            : url('fonts/GT-Walsheim-Pro-Trial-Regular.otf') format("opentype"); /* IE9 Compat; Modes */
+  font-style     : normal;
+  text-rendering : optimizeLegibility;
+}
